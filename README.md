@@ -12,8 +12,8 @@ Hands-off SEO guides + forum outreach promoting [WP Fusion](https://wpfusion.com
 
 Scheduled runs follow [`marketing/RUNBOOK.md`](marketing/RUNBOOK.md):
 
-- **Tuesday 10:00** — publish SEO guide
-- **Thursday 10:00** — one helpful forum reply (Browser Hub)
+- **Tuesday 10:30** — publish SEO guide
+- **Thursday 10:30** — one helpful forum reply (Browser Hub)
 
 ## Quick start (GitHub Pages)
 

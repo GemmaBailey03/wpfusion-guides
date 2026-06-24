@@ -1,8 +1,9 @@
 # WP Fusion affiliate marketing — agent runbook
 
 **Project:** WP Fusion affiliate promotion  
-**Runs:** Tuesday & Thursday **10:00** (local)  
-**Schedule (cron):** `0 10 * * 2,4`  
+**Runs:** Tuesday & Thursday **10:30** (local)  
+**Schedule (cron):** `30 10 * * 2,4`  
+**Why 10:30:** Browser Hub forum runs (Thu) need Gemma's Mac on — 10:30 allows time for the machine to be awake.  
 **Owner:** Cursor automation · **Notify:** WhatsApp Gemma (`447932656999`)  
 **Affiliate link:** https://wpfusion.com/ref/599/
 
@@ -149,7 +150,7 @@ If WhatsApp MCP unavailable, append same text to `forum-log.md` Notes column and
 | Field | Value |
 | --- | --- |
 | Name | WP Fusion Tue/Thu affiliate marketing |
-| Schedule | Tue & Thu **10:00** local (`0 10 * * 2,4`) |
+| Schedule | Tue & Thu **10:30** local (`30 10 * * 2,4`) |
 | Repo | `GemmaBailey03/wpfusion-guides` · `main` |
 | Prompt | Follow `marketing/RUNBOOK.md`. Affiliate link: https://wpfusion.com/ref/599/. Always WhatsApp 447932656999 success or failure summary. |
 | Tools | Git, Browser Hub (Thu only, local Mac), WhatsApp MCP |

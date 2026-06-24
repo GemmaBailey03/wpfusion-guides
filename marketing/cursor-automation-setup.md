@@ -8,7 +8,7 @@ Use this file to create the scheduled automation in the **Agents Window** (Autom
 | --- | --- |
 | **Name** | WP Fusion Tue/Thu affiliate marketing |
 | **Description** | Publish SEO guides Tuesdays; helpful forum replies Thursdays. WhatsApp summary every run. |
-| **Schedule** | Tue & Thu 10:00 local — cron `0 10 * * 2,4` |
+| **Schedule** | Tue & Thu 10:30 local — cron `30 10 * * 2,4` |
 | **Repo** | `GemmaBailey03/wpfusion-guides` branch `main` |
 | **Memory** | Enabled |
 
@@ -46,7 +46,7 @@ description: "SEO guides Tue; forum help Thu. WhatsApp Gemma every run."
 workflow:
   triggers:
     - cron:
-        cron: "0 10 * * 2,4"
+        cron: "30 10 * * 2,4"
   actions: []
   prompts:
     - |
