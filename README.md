@@ -17,9 +17,9 @@ Scheduled runs follow [`marketing/RUNBOOK.md`](marketing/RUNBOOK.md):
 
 ## Quick start (GitHub Pages)
 
-1. Create GitHub repo `GemmaBailey03/wpfusion-guides` and push this folder
-2. Settings → Pages → Source: **GitHub Actions**
-3. Site live at `https://gemmabailey03.github.io/wpfusion-guides/` (update `site-config.json` if repo name differs)
+1. Repo: https://github.com/GemmaBailey03/wpfusion-guides
+2. Follow [`docs/GITHUB-PAGES-SETUP.md`](docs/GITHUB-PAGES-SETUP.md) to enable Pages (one-time workflow push)
+3. Site live at `https://gemmabailey03.github.io/wpfusion-guides/`
 
 ## Browser Hub (Thursday forum runs)
 
