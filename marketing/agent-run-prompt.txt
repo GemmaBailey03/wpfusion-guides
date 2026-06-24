@@ -1,0 +1,11 @@
+Follow marketing/RUNBOOK.md exactly for today's WP Fusion affiliate marketing run.
+
+Affiliate link: https://wpfusion.com/ref/599/
+
+If today is Tuesday: publish the next SEO guide from marketing/content-queue.md. Update site/index.html, site/sitemap.xml, marketing/content-queue.md, and marketing/forum-log.md. Commit and push to main.
+
+If today is Thursday: run one helpful forum reply via Browser Hub (scripts/browser-hub-forum-reddit.json or browser-hub-forum-wordpress-org.json per forum-log.md rotation). Max 1 comment. Skip if Browser Hub is down or login required — note NEED YOU in WhatsApp.
+
+Always read marketing/affiliate-rules.md and marketing/product-knowledge.md. Never skip affiliate disclosure.
+
+Always WhatsApp 447932656999 at the end with success or failure summary (templates in RUNBOOK.md). If WhatsApp MCP fails, log the same text in marketing/forum-log.md Notes.

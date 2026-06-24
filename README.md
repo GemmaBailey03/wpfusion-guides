@@ -31,7 +31,12 @@ Dashboard: http://127.0.0.1:3847/
 
 ## Cursor Automation
 
-See [`marketing/cursor-automation-setup.md`](marketing/cursor-automation-setup.md).
+**Installed:** local scheduler (Tue/Thu 10:30) — see [`docs/AUTOMATION.md`](docs/AUTOMATION.md).
+
+```bash
+./scripts/install-automation.sh
+/Applications/Cursor.app/Contents/Resources/app/bin/cursor agent login   # once
+```
 
 ## One-time setup for Gemma
 
