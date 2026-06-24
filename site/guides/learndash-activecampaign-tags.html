@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LearnDash + ActiveCampaign tags by course progress — WP Fusion Guides</title>
+  <meta name="description" content="Tag LearnDash students in ActiveCampaign when they enroll, complete lessons, or finish courses. Trigger email automations based on real course progress.">
+  <link rel="canonical" href="https://gemmabailey03.github.io/wpfusion-guides/guides/learndash-activecampaign-tags.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container inner">
+      <a class="logo" href="../index.html"><span class="logo-mark">WP</span> Fusion Guides</a>
+      <nav class="nav">
+        <a class="btn btn-primary" href="https://wpfusion.com/ref/599/" rel="noopener sponsored">Try WP Fusion</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal-page">
+    <div class="container" style="max-width: 720px;">
+      <p class="eyebrow">Guide · LearnDash · ActiveCampaign</p>
+      <h1>LearnDash + ActiveCampaign: tag students by course progress</h1>
+      <p class="updated">Updated: 24 June 2026</p>
+
+      <p>LearnDash handles delivery and access. ActiveCampaign handles email, segmentation, and automation. The gap is knowing <em>what each student actually did</em> on your site — so you can send the right email at the right time.</p>
+
+      <p><strong>WP Fusion</strong> bridges LearnDash and ActiveCampaign: when a student enrolls, completes a lesson, passes a quiz, or finishes a course, WP Fusion applies tags in ActiveCampaign. You then build automations in ActiveCampaign off those tags — welcome sequences, nudges for inactive learners, upsells after completion, and so on.</p>
+
+      <h2>Why tags beat manual list management</h2>
+      <ul>
+        <li><strong>Granular segments</strong> — e.g. tag <code>Completed Lesson 3</code> vs waiting until full course completion</li>
+        <li><strong>Automation triggers</strong> — ActiveCampaign automations start when a tag is applied</li>
+        <li><strong>Content gating</strong> — optionally restrict bonus lessons or downloads based on ActiveCampaign tags (bi-directional)</li>
+        <li><strong>One contact record</strong> — same person who bought via WooCommerce and learns in LearnDash stays one synced contact</li>
+      </ul>
+
+      <h2>LearnDash events WP Fusion can tag</h2>
+      <p>Configure these under WP Fusion → Integrations → LearnDash (see <a href="https://wpfusion.com/documentation/learning-management/learndash/" rel="noopener">official LearnDash documentation</a>):</p>
+      <ul>
+        <li>Course enrollment</li>
+        <li>Lesson, topic, and quiz completion</li>
+        <li>Course completion</li>
+        <li>Group enrollment (when using LearnDash groups)</li>
+      </ul>
+      <p>For each event, choose which ActiveCampaign tags to apply. Example: enroll in “SEO Fundamentals” → tag <code>SEO Course Active</code>; complete final lesson → tag <code>SEO Course Graduate</code> and remove <code>SEO Course Active</code>.</p>
+
+      <h2>Example automation flows</h2>
+      <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+        <thead>
+          <tr style="border-bottom: 2px solid var(--border); text-align: left;">
+            <th style="padding: 0.5rem 0;">LearnDash trigger</th>
+            <th style="padding: 0.5rem 0;">Tag applied</th>
+            <th style="padding: 0.5rem 0;">ActiveCampaign automation idea</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">Course enrollment</td><td><code>New Student</code></td><td>Onboarding email series</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">Lesson 1 complete</td><td><code>Started Course</code></td><td>Tips for finishing module 2</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">No progress 14 days</td><td>(via login tracking)</td><td>Re-engagement email</td></tr>
+          <tr><td style="padding: 0.5rem 0;">Course complete</td><td><code>Graduate</code></td><td>Certificate + next course offer</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Restrict course content with ActiveCampaign tags</h2>
+      <p>WP Fusion can also <strong>unlock</strong> LearnDash courses, lessons, or topics when a user has specific tags in ActiveCampaign — useful for bonus modules sold via email or upsells triggered in your CRM.</p>
+      <p>Docs: <a href="https://wpfusion.com/documentation/learning-management/learndash/#courses-lessons-topics" rel="noopener">LearnDash access control with tags</a></p>
+
+      <h2>Setup checklist</h2>
+      <ol>
+        <li>Connect ActiveCampaign in WP Fusion (API URL + key).</li>
+        <li>Enable the LearnDash integration.</li>
+        <li>Define tags per course/event in LearnDash settings.</li>
+        <li>Create matching tag-triggered automations in ActiveCampaign.</li>
+        <li>Test with a staging user: enroll → complete a lesson → confirm tag appears in ActiveCampaign.</li>
+      </ol>
+
+      <p>New to the WordPress + ActiveCampaign stack? Start with our <a href="wordpress-activecampaign-integration.html">integration overview</a>.</p>
+
+      <div class="cta-block">
+        <h2 style="margin-top: 0;">Connect LearnDash to ActiveCampaign</h2>
+        <p>WP Fusion supports LearnDash with all CRMs in its compatibility table — ActiveCampaign is one of the most common pairings for course creators.</p>
+        <a class="btn btn-primary btn-lg" href="https://wpfusion.com/ref/599/" rel="noopener sponsored">Get WP Fusion →</a>
+        <p style="font-size: 0.9rem; color: var(--muted); margin-top: 1rem;">Official: <a href="https://wpfusion.com/connect/connect-learndash-to-activecampaign/" rel="noopener">Connect LearnDash to ActiveCampaign</a></p>
+      </div>
+
+      <div class="disclosure-box">
+        <strong>Affiliate disclosure:</strong> I may earn a commission if you purchase through
+        <a href="https://wpfusion.com/ref/599/" rel="noopener sponsored">wpfusion.com/ref/599/</a> — at no extra cost to you.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>WP Fusion Guides</strong></div>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="wordpress-activecampaign-integration.html">ActiveCampaign overview</a>
+        <a href="https://wpfusion.com/documentation/learning-management/learndash/" rel="noopener">Official LearnDash docs</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

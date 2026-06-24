@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WordPress + ActiveCampaign integration — WP Fusion Guides</title>
+  <meta name="description" content="How to connect WordPress to ActiveCampaign: sync contacts, apply tags from site activity, restrict content, and automate email without Zapier chains.">
+  <link rel="canonical" href="https://gemmabailey03.github.io/wpfusion-guides/guides/wordpress-activecampaign-integration.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container inner">
+      <a class="logo" href="../index.html"><span class="logo-mark">WP</span> Fusion Guides</a>
+      <nav class="nav">
+        <a class="btn btn-primary" href="https://wpfusion.com/ref/599/" rel="noopener sponsored">Try WP Fusion</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal-page">
+    <div class="container" style="max-width: 720px;">
+      <p class="eyebrow">Guide · ActiveCampaign</p>
+      <h1>WordPress + ActiveCampaign integration: a practical overview</h1>
+      <p class="updated">Updated: 24 June 2026</p>
+
+      <p>If you run WordPress and ActiveCampaign side by side, you have probably hit the same wall: forms on your site, purchases in WooCommerce, and course progress in LearnDash all live in WordPress — while your segments, automations, and email history live in ActiveCampaign. Moving data between them with one-off Zaps works until it does not.</p>
+
+      <p><strong>WP Fusion</strong> is a WordPress plugin built specifically to connect your site to ActiveCampaign (and 60+ other CRMs). It applies tags based on what users do on WordPress, syncs contact fields both ways, and can restrict content based on tags already in ActiveCampaign.</p>
+
+      <h2>What you can automate</h2>
+      <ul>
+        <li><strong>Tag on action</strong> — purchase, form submit, course enrollment, lesson completion, login, membership signup</li>
+        <li><strong>Field sync</strong> — map WordPress user meta to ActiveCampaign custom fields (including order history and LTV on WooCommerce sites)</li>
+        <li><strong>Access control</strong> — show or hide pages, courses, and downloads based on ActiveCampaign tags</li>
+        <li><strong>Abandoned cart</strong> — sync cart data for recovery sequences in ActiveCampaign</li>
+        <li><strong>Engagement context</strong> — depending on setup, email activity from ActiveCampaign can inform what you see alongside WordPress user records</li>
+      </ul>
+
+      <h2>How setup works (high level)</h2>
+      <ol>
+        <li>Install WP Fusion on WordPress and connect your ActiveCampaign API credentials (see the <a href="https://wpfusion.com/documentation/getting-started/" rel="noopener">official getting started guide</a>).</li>
+        <li>Choose which WordPress plugins to integrate (WooCommerce, LearnDash, Gravity Forms, MemberPress, etc.) from the <a href="https://wpfusion.com/documentation/#integrations" rel="noopener">integrations list</a>.</li>
+        <li>Configure <strong>Apply Tags</strong> settings per integration — e.g. tag <code>Customer</code> on WooCommerce purchase, or <code>Course Enrolled</code> on LearnDash enrollment.</li>
+        <li>Map contact fields under WP Fusion → Contact Fields so WordPress and ActiveCampaign stay aligned.</li>
+        <li>Build your email automations in ActiveCampaign triggered by those tags (where WP Fusion does not replace your CRM — it feeds it).</li>
+      </ol>
+
+      <h2>WordPress + ActiveCampaign vs Zapier</h2>
+      <p>Zapier is fine for simple one-way triggers. WP Fusion is stronger when you need:</p>
+      <ul>
+        <li>Bi-directional field sync and tag-based <strong>content restriction</strong> inside WordPress</li>
+        <li>Dozens of native plugin integrations without maintaining separate Zaps per event</li>
+        <li>Consistent contact records when the same person registers, buys, and completes lessons</li>
+      </ul>
+      <p>For purely internal WordPress workflows (no CRM depth), <strong>Uncanny Automator</strong> is another option — it connects plugins inside WordPress rather than acting as a full CRM bridge.</p>
+
+      <h2>Common use cases</h2>
+      <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+        <thead>
+          <tr style="border-bottom: 2px solid var(--border); text-align: left;">
+            <th style="padding: 0.5rem 0;">If you run…</th>
+            <th style="padding: 0.5rem 0;">Typical automation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">WooCommerce store</td><td>Tag buyers, sync LTV, recover abandoned carts</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">LearnDash courses</td><td>Tag by progress; unlock bonus content via tags — see our <a href="learndash-activecampaign-tags.html">LearnDash guide</a></td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">Membership site</td><td>Tag on signup/cancel; restrict member-only pages</td></tr>
+          <tr><td style="padding: 0.5rem 0;">Lead gen forms</td><td>Send submissions + tags to ActiveCampaign lists</td></tr>
+        </tbody>
+      </table>
+
+      <div class="cta-block">
+        <h2 style="margin-top: 0;">Ready to connect WordPress and ActiveCampaign?</h2>
+        <p>WP Fusion includes a 30-day money-back guarantee and extensive documentation. Plans start at $297/year.</p>
+        <a class="btn btn-primary btn-lg" href="https://wpfusion.com/ref/599/" rel="noopener sponsored">Get WP Fusion →</a>
+        <p style="font-size: 0.9rem; color: var(--muted); margin-top: 1rem;">Official site: <a href="https://wpfusion.com/connect/connect-learndash-to-activecampaign/" rel="noopener">WP Fusion + ActiveCampaign</a> · <a href="https://wpfusion.com/demo-signup/" rel="noopener">Try the demo</a></p>
+      </div>
+
+      <div class="disclosure-box">
+        <strong>Affiliate disclosure:</strong> I may earn a commission if you purchase through
+        <a href="https://wpfusion.com/ref/599/" rel="noopener sponsored">wpfusion.com/ref/599/</a> — at no extra cost to you.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>WP Fusion Guides</strong></div>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="learndash-activecampaign-tags.html">LearnDash guide</a>
+        <a href="https://wpfusion.com/documentation/" rel="noopener">Official docs</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

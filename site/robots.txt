@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gemmabailey03.github.io/wpfusion-guides/sitemap.xml
