@@ -2,38 +2,30 @@
 
 Repo: https://github.com/GemmaBailey03/wpfusion-guides
 
-The workflow file lives at `.github/workflows/pages.yml` but may need a **one-time push from your machine** (GitHub OAuth here lacks `workflow` scope).
+Live URL (once enabled): https://gemmabailey03.github.io/wpfusion-guides/
 
-## Option A — Push workflow from your Mac (recommended)
+## One setting required in GitHub
 
-In Terminal:
+1. Open https://github.com/GemmaBailey03/wpfusion-guides/settings/pages
+2. Under **Build and deployment** → **Source**, choose **GitHub Actions** (not “Deploy from branch”)
+3. Save — no other fields needed
 
-```bash
-cd "/Users/gemmabailey/AiStuff/WP Fusion"
-git add .github/workflows/pages.yml
-git commit -m "Add GitHub Pages deploy workflow"
-git push
-```
-
-If push is rejected for workflow scope, run once:
+Then either wait for the next push, or re-run the workflow:
 
 ```bash
-gh auth refresh -h github.com -s workflow
-git push
+gh workflow run "Deploy GitHub Pages" --repo GemmaBailey03/wpfusion-guides
 ```
 
-Then in GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+Check progress: https://github.com/GemmaBailey03/wpfusion-guides/actions
 
-Site URL: https://gemmabailey03.github.io/wpfusion-guides/
+## Verify site is live
 
-## Option B — Paste workflow in GitHub UI
+```bash
+curl -I https://gemmabailey03.github.io/wpfusion-guides/
+```
 
-1. Open https://github.com/GemmaBailey03/wpfusion-guides
-2. **Add file** → `.github/workflows/pages.yml`
-3. Paste contents from local `.github/workflows/pages.yml`
-4. Commit to `main`
-5. **Settings → Pages → GitHub Actions**
+You want `HTTP/2 200`.
 
 ## Cursor Automation
 
-After repo is live, create the scheduled automation using [`marketing/cursor-automation-setup.md`](../marketing/cursor-automation-setup.md) in the Agents Window.
+After the site returns 200, create the Tue/Thu automation using [`marketing/cursor-automation-setup.md`](../marketing/cursor-automation-setup.md) in the Agents Window.
