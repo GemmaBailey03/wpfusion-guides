@@ -6,7 +6,7 @@ Max **1 comment per Thursday run**. Value-first answers only.
 
 | Date | Platform | Thread URL | Topic summary | Status |
 | --- | --- | --- | --- | --- |
-| — | — | — | No replies yet | — |
+| 25 Jun 2026 | r/Wordpress | — | CRM/ActiveCampaign search — skipped | Blocked — Reddit network security block; login required in Browser Hub |
 
 ## Platform rotation (Thursday)
 
@@ -37,7 +37,7 @@ Update every run (Tuesday or Thursday). Gemma checks affiliate conversions month
 
 | Week ending | Guides live | Guides published this week | Forum replies this week | Site URL | Notes |
 | --- | --- | --- | --- | --- | --- |
-| 29 Jun 2026 | 2 | 2 | 0 | https://gemmabailey03.github.io/wpfusion-guides/ | Initial setup — guides #1–2 published |
+| 29 Jun 2026 | 2 | 2 | 0 | https://gemmabailey03.github.io/wpfusion-guides/ | Thu 25 Jun — Reddit blocked (network security); NEED YOU login at Browser Hub |
 
 ### Affiliate portal (manual — Gemma monthly)
 
