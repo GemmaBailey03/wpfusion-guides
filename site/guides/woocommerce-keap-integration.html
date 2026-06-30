@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WooCommerce + Keap integration: sync customers and purchase tags — WP Fusion Guides</title>
+  <meta name="description" content="Connect WooCommerce to Keap (Infusionsoft): sync customers, orders, subscriptions, and apply purchase tags for email automation without Zapier.">
+  <link rel="canonical" href="https://gemmabailey03.github.io/wpfusion-guides/guides/woocommerce-keap-integration.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container inner">
+      <a class="logo" href="../index.html"><span class="logo-mark">WP</span> Fusion Guides</a>
+      <nav class="nav">
+        <a class="btn btn-primary" href="https://wpfusion.com/ref/599/" rel="noopener sponsored">Try WP Fusion</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal-page">
+    <div class="container" style="max-width: 720px;">
+      <p class="eyebrow">Guide · WooCommerce · Keap</p>
+      <h1>WooCommerce + Keap: sync customers and purchase tags</h1>
+      <p class="updated">Updated: 30 June 2026</p>
+
+      <p>WooCommerce holds your orders, subscriptions, and customer accounts. Keap (formerly Infusionsoft) holds your contacts, tags, and email automation. Without a bridge, you end up exporting CSVs, building fragile Zapier workflows, or manually tagging buyers after every product launch.</p>
+
+      <p><strong>WP Fusion</strong> connects WooCommerce to Keap natively: when someone registers, purchases, renews a subscription, or abandons a cart, WP Fusion creates or updates the contact in Keap and applies tags you define. Your Keap automations then take over — welcome sequences, post-purchase follow-ups, win-back campaigns, and segmentation by lifetime value.</p>
+
+      <h2>The problem with piecing it together manually</h2>
+      <ul>
+        <li><strong>Duplicate contacts</strong> — same buyer registers on WordPress and again via a Keap form</li>
+        <li><strong>Missing purchase context</strong> — Keap does not know what they bought unless you sync it</li>
+        <li><strong>Zapier cost and limits</strong> — one Zap per event adds up; bi-directional field sync is harder</li>
+        <li><strong>No abandoned cart in Keap</strong> — cart data stays in WooCommerce unless you push it</li>
+      </ul>
+
+      <h2>What WP Fusion syncs from WooCommerce to Keap</h2>
+      <p>See the <a href="https://wpfusion.com/documentation/ecommerce/woocommerce/" rel="noopener">official WooCommerce documentation</a> for full settings. Typical sync includes:</p>
+      <ul>
+        <li><strong>Customer records</strong> — create or update Keap contacts when users register or checkout</li>
+        <li><strong>Purchase tags</strong> — tag by product, category, order status, or subscription event</li>
+        <li><strong>Order and LTV fields</strong> — map order totals, product names, and lifetime value to Keap custom fields</li>
+        <li><strong>Subscriptions</strong> — tag on subscribe, renew, cancel, or failed payment (WooCommerce Subscriptions)</li>
+        <li><strong>Abandoned carts</strong> — sync cart contents for recovery campaigns in Keap</li>
+      </ul>
+
+      <h2>How setup works (high level)</h2>
+      <ol>
+        <li>Install WP Fusion on WordPress and connect Keap using your API credentials (see the <a href="https://wpfusion.com/documentation/getting-started/" rel="noopener">getting started guide</a>).</li>
+        <li>Enable the WooCommerce integration under WP Fusion → Integrations.</li>
+        <li>Configure <strong>Apply Tags</strong> per event — e.g. tag <code>Customer</code> on any purchase, <code>Bought Course Bundle</code> for a specific product, or <code>Subscription Active</code> on renewal.</li>
+        <li>Map contact fields under WP Fusion → Contact Fields so order data and LTV appear on the Keap contact record.</li>
+        <li>Build Keap automations triggered by those tags — post-purchase emails, upsells, or sales follow-up tasks.</li>
+      </ol>
+
+      <h2>Example tag strategy for a WooCommerce store</h2>
+      <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+        <thead>
+          <tr style="border-bottom: 2px solid var(--border); text-align: left;">
+            <th style="padding: 0.5rem 0;">WooCommerce event</th>
+            <th style="padding: 0.5rem 0;">Keap tag</th>
+            <th style="padding: 0.5rem 0;">Automation idea</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">First purchase</td><td><code>Customer</code></td><td>Thank-you + onboarding sequence</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">Specific product bought</td><td><code>Product: Pro Plan</code></td><td>Product-specific tips and upsell</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">Subscription cancelled</td><td><code>Churned</code></td><td>Win-back offer within 30 days</td></tr>
+          <tr><td style="padding: 0.5rem 0;">Abandoned cart</td><td><code>Cart Abandoned</code></td><td>Recovery email with cart link</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Abandoned cart recovery in Keap</h2>
+      <p>WP Fusion can track abandoned WooCommerce carts and sync cart contents to Keap so you can run recovery campaigns. Setup details: <a href="https://wpfusion.com/documentation/abandoned-cart-tracking/abandoned-cart-overview/" rel="noopener">abandoned cart overview</a>.</p>
+
+      <h2>WooCommerce + Keap vs Zapier</h2>
+      <p>Zapier works for simple one-way triggers (new order → add tag). WP Fusion is stronger when you need:</p>
+      <ul>
+        <li>Bi-directional field sync between WordPress user meta and Keap custom fields</li>
+        <li>Tag-based <strong>content restriction</strong> on membership or course pages (same buyer may also use LearnDash — see our <a href="learndash-activecampaign-tags.html">LearnDash tagging guide</a> for a similar workflow with ActiveCampaign)</li>
+        <li>Many WooCommerce events (subscriptions, refunds, cart abandon) without maintaining separate Zaps</li>
+        <li>One contact record when the same person buys, learns, and submits forms</li>
+      </ul>
+      <p>For a broader look at WordPress ↔ CRM bridges, see our <a href="wordpress-activecampaign-integration.html">WordPress + CRM integration overview</a> — the same principles apply whether your CRM is Keap, ActiveCampaign, or HubSpot.</p>
+
+      <h2>Setup checklist</h2>
+      <ol>
+        <li>Connect Keap in WP Fusion (OAuth or API credentials per current Keap connection method).</li>
+        <li>Enable WooCommerce integration and choose sync options (guest checkout, order statuses, etc.).</li>
+        <li>Define tags per product or order event.</li>
+        <li>Map order total, last product purchased, and LTV to Keap fields.</li>
+        <li>Place a test order on staging → confirm contact, tags, and fields in Keap.</li>
+      </ol>
+
+      <div class="cta-block">
+        <h2 style="margin-top: 0;">Ready to connect WooCommerce and Keap?</h2>
+        <p>WP Fusion supports Keap and 60+ CRMs with native WooCommerce integration. Plans start at $297/year with a 30-day money-back guarantee.</p>
+        <a class="btn btn-primary btn-lg" href="https://wpfusion.com/ref/599/" rel="noopener sponsored">Get WP Fusion →</a>
+        <p style="font-size: 0.9rem; color: var(--muted); margin-top: 1rem;">Official docs: <a href="https://wpfusion.com/documentation/ecommerce/woocommerce/" rel="noopener">WooCommerce integration</a> · <a href="https://wpfusion.com/documentation/#integrations" rel="noopener">All integrations</a> · <a href="https://wpfusion.com/demo-signup/" rel="noopener">Try the demo</a></p>
+      </div>
+
+      <div class="disclosure-box">
+        <strong>Affiliate disclosure:</strong> I may earn a commission if you purchase through
+        <a href="https://wpfusion.com/ref/599/" rel="noopener sponsored">wpfusion.com/ref/599/</a> — at no extra cost to you.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>WP Fusion Guides</strong></div>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="wordpress-activecampaign-integration.html">ActiveCampaign guide</a>
+        <a href="https://wpfusion.com/documentation/ecommerce/woocommerce/" rel="noopener">Official docs</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
