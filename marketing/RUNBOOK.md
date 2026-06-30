@@ -1,11 +1,14 @@
 # WP Fusion affiliate marketing — agent runbook
 
 **Project:** WP Fusion affiliate promotion  
-**Runs:** Tuesday & Thursday **10:30** (local)  
+**Production:** EC2 `54.242.190.238` · project `~/wp-fusion`  
+**Runs:** Tuesday & Thursday **10:30 Europe/London** (systemd timer on EC2)  
 **Schedule (cron):** `30 10 * * 2,4`  
-**Why 10:30:** Browser Hub forum runs (Thu) need Gemma's Mac on — 10:30 allows time for the machine to be awake.  
+**Browser Hub:** EC2 `http://127.0.0.1:3847` (not Mac)  
 **Owner:** Cursor automation · **Notify:** WhatsApp Gemma (`447932656999`)  
 **Affiliate link:** https://wpfusion.com/ref/599/
+
+**EC2 auth notes:** `agent status` showing **Not logged in** on the server is normal — runs use `CURSOR_API_KEY` from `~/wp-fusion/.env`. Pushes need `GITHUB_TOKEN` in the same file — see [`docs/GITHUB-TOKEN-SETUP.md`](../docs/GITHUB-TOKEN-SETUP.md).
 
 ---
 
@@ -71,7 +74,7 @@
 ### Browser Hub procedure
 
 1. Check Browser Hub health: `GET http://127.0.0.1:3847/health`
-2. If down: skip forum step, log in `forum-log.md`, WhatsApp Gemma with NEED YOU note (Mac must run Browser Hub)
+2. If down: skip forum step, log in `forum-log.md`, WhatsApp Gemma with NEED YOU note (Browser Hub on EC2 must be running — `browser-hub.service`)
 3. If up: submit task from [`scripts/browser-hub-forum-reddit.json`](../scripts/browser-hub-forum-reddit.json) OR [`scripts/browser-hub-forum-wordpress-org.json`](../scripts/browser-hub-forum-wordpress-org.json) based on platform rotation in `forum-log.md`
 4. Poll `GET http://127.0.0.1:3847/tasks/<id>` until complete or failed
 5. If login required: WhatsApp Gemma — *“Open http://127.0.0.1:3847 — log into [platform] in the open browser, reply done when finished.”* Do not post until login works.
@@ -132,6 +135,21 @@ Update the **Weekly metrics** table in [`marketing/forum-log.md`](forum-log.md):
 • Action: [fix needed]
 ```
 
+### Git push failed (EC2)
+
+If content was committed locally but push failed (empty or invalid token):
+
+```text
+❌ WP Fusion marketing — NOT COMPLETED [Tue/Thu] [date]
+
+• Failed at: git push to GitHub
+• Error: GITHUB_TOKEN is not set — commits are on the server but the live site was not updated
+• Partial work: [guide slug / files committed locally]
+• Action: Add GITHUB_TOKEN to ~/wp-fusion/.env — see docs/GITHUB-TOKEN-SETUP.md
+```
+
+Do **not** tell Gemma to SSH or use Terminal for routine fixes — point her to the doc above (or ask Cursor to add the token on EC2).
+
 ### Blocked on login
 
 ```text
@@ -150,10 +168,11 @@ If WhatsApp MCP unavailable, append same text to `forum-log.md` Notes column and
 | Field | Value |
 | --- | --- |
 | Name | WP Fusion Tue/Thu affiliate marketing |
-| Schedule | Tue & Thu **10:30** local (`30 10 * * 2,4`) |
+| Schedule | Tue & Thu **10:30 Europe/London** on EC2 (`30 10 * * 2,4`) |
+| Host | EC2 `54.242.190.238` · `~/wp-fusion` |
 | Repo | `GemmaBailey03/wpfusion-guides` · `main` |
 | Prompt | Follow `marketing/RUNBOOK.md`. Affiliate link: https://wpfusion.com/ref/599/. Always WhatsApp 447932656999 success or failure summary. |
-| Tools | Git, Browser Hub (Thu only, local Mac), WhatsApp MCP |
+| Tools | Git (needs `GITHUB_TOKEN` on EC2), Browser Hub (Thu only, EC2 :3847), WhatsApp MCP |
 
 See [`marketing/cursor-automation-setup.md`](cursor-automation-setup.md) for editor prefill.
 

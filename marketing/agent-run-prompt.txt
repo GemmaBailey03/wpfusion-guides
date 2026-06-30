@@ -9,3 +9,5 @@ If today is Thursday: run one helpful forum reply via Browser Hub (scripts/brows
 Always read marketing/affiliate-rules.md and marketing/product-knowledge.md. Never skip affiliate disclosure.
 
 Always WhatsApp 447932656999 at the end with success or failure summary (templates in RUNBOOK.md). If WhatsApp MCP fails, log the same text in marketing/forum-log.md Notes.
+
+If git push to main fails because GITHUB_TOKEN is missing or empty on EC2, send the failure WhatsApp with: Failed at git push; Error GITHUB_TOKEN empty in .env; Action Add GITHUB_TOKEN to ~/wp-fusion/.env (see docs/GITHUB-TOKEN-SETUP.md). Do not ask Gemma to SSH unless she asks for help.
