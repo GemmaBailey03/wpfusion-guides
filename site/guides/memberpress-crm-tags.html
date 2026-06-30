@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MemberPress + CRM: membership access via tags — WP Fusion Guides</title>
+  <meta name="description" content="Connect MemberPress to your CRM with WP Fusion: tag members on signup, sync subscription status, and control content access using CRM tags without custom code.">
+  <link rel="canonical" href="https://gemmabailey03.github.io/wpfusion-guides/guides/memberpress-crm-tags.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container inner">
+      <a class="logo" href="../index.html"><span class="logo-mark">WP</span> Fusion Guides</a>
+      <nav class="nav">
+        <a class="btn btn-primary" href="https://wpfusion.com/ref/599/" rel="noopener sponsored">Try WP Fusion</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal-page">
+    <div class="container" style="max-width: 720px;">
+      <p class="eyebrow">Guide · MemberPress · CRM</p>
+      <h1>MemberPress + CRM: membership access via tags</h1>
+      <p class="updated">Updated: 30 June 2026</p>
+
+      <p>MemberPress handles membership levels, subscriptions, and gated content on WordPress. Your CRM (ActiveCampaign, Keap, HubSpot, Mailchimp, and others) holds contacts, tags, and email automation. Without a bridge, you manually export members, rebuild segments in your CRM, or maintain separate Zapier workflows every time a subscription changes.</p>
+
+      <p><strong>WP Fusion</strong> connects MemberPress to 60+ CRMs: when someone joins, renews, upgrades, cancels, or fails a payment, WP Fusion creates or updates the contact and applies tags you define. You can also restrict WordPress content based on CRM tags — so membership status in your CRM drives what members see on your site.</p>
+
+      <h2>The problem with disconnected membership and CRM data</h2>
+      <ul>
+        <li><strong>Stale segments</strong> — your CRM still shows “Active Member” after a subscription expires</li>
+        <li><strong>Manual onboarding</strong> — new members do not enter welcome sequences until someone exports a CSV</li>
+        <li><strong>No CRM-driven access</strong> — you cannot unlock bonus content from a tag applied in an email automation</li>
+        <li><strong>Fragmented automations</strong> — churn, trial conversion, and upgrade events live in MemberPress but not in your CRM</li>
+      </ul>
+
+      <h2>What WP Fusion syncs from MemberPress to your CRM</h2>
+      <p>See the <a href="https://wpfusion.com/documentation/membership/memberpress/" rel="noopener">official MemberPress documentation</a> for full settings. Typical sync includes:</p>
+      <ul>
+        <li><strong>Contact records</strong> — create or update CRM contacts at checkout with custom registration fields</li>
+        <li><strong>Membership tags</strong> — apply tags when a level is purchased, renewed, upgraded, downgraded, paused, or cancelled</li>
+        <li><strong>Subscription events</strong> — separate tags for trial signup, trial conversion, payment failure, and refund</li>
+        <li><strong>Membership fields</strong> — sync level name, status, expiration date, subscription total, and lifetime value to CRM custom fields</li>
+        <li><strong>Auto-enrollment</strong> — optionally link a CRM tag to a membership level so applying the tag grants access (and removing it revokes access)</li>
+      </ul>
+
+      <h2>How setup works (high level)</h2>
+      <ol>
+        <li>Install WP Fusion on WordPress and connect your CRM (see the <a href="https://wpfusion.com/documentation/getting-started/" rel="noopener">getting started guide</a>).</li>
+        <li>Edit each MemberPress membership level → open the <strong>WP Fusion</strong> tab.</li>
+        <li>Set <strong>Apply Tags</strong> for registration and configure tags for subscription cancelled, paused, upgraded, downgraded, payment failed, trial, and refund events.</li>
+        <li>Optionally enable <strong>Remove Tags</strong> so registration tags drop when a membership expires.</li>
+        <li>Map MemberPress fields under WP Fusion → Contact Fields (membership level, expiration date, subscription status, etc.).</li>
+        <li>Build CRM automations triggered by those tags — welcome sequences, renewal reminders, win-back offers.</li>
+      </ol>
+
+      <h2>Example tag strategy for a MemberPress site</h2>
+      <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+        <thead>
+          <tr style="border-bottom: 2px solid var(--border); text-align: left;">
+            <th style="padding: 0.5rem 0;">MemberPress event</th>
+            <th style="padding: 0.5rem 0;">CRM tag</th>
+            <th style="padding: 0.5rem 0;">Automation idea</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">Premium membership purchased</td><td><code>Premium Member</code></td><td>Welcome + onboarding sequence</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">Trial started</td><td><code>Trial Active</code></td><td>Trial tips and conversion nudge before expiry</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">Subscription cancelled</td><td><code>Churned</code></td><td>Win-back offer before access ends</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">Payment failed</td><td><code>Payment Failed</code></td><td>Update billing link + support follow-up</td></tr>
+          <tr><td style="padding: 0.5rem 0;">Upgraded to annual plan</td><td><code>Annual Member</code></td><td>Thank-you + annual-member perks</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Restrict WordPress content using CRM tags</h2>
+      <p>WP Fusion can gate pages, posts, and MemberPress Courses based on tags in your CRM — not just MemberPress roles. On any post or page, use the WP Fusion meta box to set <strong>Required tags (any)</strong> or <strong>Required tags (all)</strong>. Users without the tag see a restricted message or redirect to a sales page.</p>
+      <p>This works well for bonus modules, alumni-only content, or upsell pages unlocked after a CRM automation applies a tag. Full details: <a href="https://wpfusion.com/documentation/getting-started/access-control/" rel="noopener">restricting access to content</a>.</p>
+      <p>MemberPress supports multiple concurrent memberships, so tag changes are tied to subscription and transaction events rather than a single “current level.” WP Fusion applies tags when members sign up, when subscription status changes, when transactions expire, and on upgrade/downgrade — see the <a href="https://wpfusion.com/documentation/membership/memberpress/" rel="noopener">MemberPress docs</a> for the full event list.</p>
+
+      <h2>MemberPress Courses and abandoned checkout</h2>
+      <p>If you use MemberPress Courses, WP Fusion can tag members when they complete a course, lesson, or quiz. Configure tags on each course, lesson, or quiz alongside MemberPress access rules.</p>
+      <p>With a Plus or Professional WP Fusion license, the Abandoned Cart addon can capture checkout details before purchase completes and sync them to your CRM for recovery campaigns. Tags are set on the WP Fusion tab when editing each membership level.</p>
+
+      <h2>MemberPress + CRM vs Zapier</h2>
+      <p>Zapier works for simple one-way triggers (new membership → add tag). WP Fusion is stronger when you need:</p>
+      <ul>
+        <li>Bi-directional field sync between WordPress user meta and CRM custom fields</li>
+        <li>Tag-based <strong>content restriction</strong> on pages, courses, and downloads</li>
+        <li>Many MemberPress events (trial conversion, payment failure, upgrade/downgrade) without separate Zaps</li>
+        <li>CRM tag → membership auto-enrollment via linked tags and webhooks</li>
+        <li>One contact record when the same person buys from WooCommerce, learns in LearnDash, and holds a MemberPress subscription</li>
+      </ul>
+      <p>For a broader WordPress ↔ CRM overview, see our <a href="wordpress-activecampaign-integration.html">ActiveCampaign integration guide</a>. Store owners often combine MemberPress with WooCommerce — our <a href="woocommerce-keap-integration.html">WooCommerce + Keap guide</a> covers purchase tagging for a similar workflow. Course creators may also use <a href="learndash-activecampaign-tags.html">LearnDash + ActiveCampaign tagging</a> alongside MemberPress Courses.</p>
+
+      <h2>Setup checklist</h2>
+      <ol>
+        <li>Connect your CRM in WP Fusion.</li>
+        <li>Configure tags on each MemberPress membership level (registration + subscription events).</li>
+        <li>Map membership level, expiration date, and subscription status to CRM fields.</li>
+        <li>Set required tags on protected content or MemberPress Courses.</li>
+        <li>Run a test signup on staging → confirm contact, tags, and fields in your CRM.</li>
+        <li>Optionally run batch operations under WP Fusion → Advanced to retroactively tag existing members.</li>
+      </ol>
+
+      <div class="cta-block">
+        <h2 style="margin-top: 0;">Ready to connect MemberPress and your CRM?</h2>
+        <p>WP Fusion supports MemberPress with 60+ CRMs including ActiveCampaign, Keap, HubSpot, and Mailchimp. Plans start at $297/year with a 30-day money-back guarantee.</p>
+        <a class="btn btn-primary btn-lg" href="https://wpfusion.com/ref/599/" rel="noopener sponsored">Get WP Fusion →</a>
+        <p style="font-size: 0.9rem; color: var(--muted); margin-top: 1rem;">Official docs: <a href="https://wpfusion.com/documentation/membership/memberpress/" rel="noopener">MemberPress integration</a> · <a href="https://wpfusion.com/documentation/#integrations" rel="noopener">All integrations</a> · <a href="https://wpfusion.com/demo-signup/" rel="noopener">Try the demo</a></p>
+      </div>
+
+      <div class="disclosure-box">
+        <strong>Affiliate disclosure:</strong> I may earn a commission if you purchase through
+        <a href="https://wpfusion.com/ref/599/" rel="noopener sponsored">wpfusion.com/ref/599/</a> — at no extra cost to you.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>WP Fusion Guides</strong></div>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="wordpress-activecampaign-integration.html">ActiveCampaign guide</a>
+        <a href="https://wpfusion.com/documentation/membership/memberpress/" rel="noopener">Official docs</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

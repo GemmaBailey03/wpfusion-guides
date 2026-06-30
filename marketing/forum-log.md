@@ -37,7 +37,7 @@ Update every run (Tuesday or Thursday). Gemma checks affiliate conversions month
 
 | Week ending | Guides live | Guides published this week | Forum replies this week | Site URL | Notes |
 | --- | --- | --- | --- | --- | --- |
-| 5 Jul 2026 | 3 | 1 | 0 | https://gemmabailey03.github.io/wpfusion-guides/ | Tue 30 Jun — published WooCommerce + Keap guide |
+| 5 Jul 2026 | 4 | 1 | 0 | https://gemmabailey03.github.io/wpfusion-guides/ | Tue 30 Jun — MemberPress guide committed (ce999c6); push blocked — GITHUB_TOKEN empty in .env |
 | 29 Jun 2026 | 2 | 2 | 0 | https://gemmabailey03.github.io/wpfusion-guides/ | Thu 25 Jun — Reddit blocked (network security); NEED YOU login at Browser Hub |
 
 ### Affiliate portal (manual — Gemma monthly)

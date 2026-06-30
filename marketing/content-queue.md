@@ -7,8 +7,8 @@ Update status after each Tuesday run. **Next** = publish on the next Tuesday.
 | 1 | wordpress-activecampaign-integration | WordPress + ActiveCampaign integration overview | wordpress activecampaign integration | Done |
 | 2 | learndash-activecampaign-tags | LearnDash + ActiveCampaign: tag students by course progress | learndash activecampaign integration | Done |
 | 3 | woocommerce-keap-integration | WooCommerce + Keap/Infusionsoft: sync customers and purchase tags | woocommerce keap integration | Done |
-| 4 | memberpress-crm-tags | MemberPress + CRM: membership access via tags | memberpress crm integration | Next |
-| 5 | gravity-forms-crm-without-zapier | Gravity Forms → CRM without Zapier | gravity forms crm integration | Queue |
+| 4 | memberpress-crm-tags | MemberPress + CRM: membership access via tags | memberpress crm integration | Done |
+| 5 | gravity-forms-crm-without-zapier | Gravity Forms → CRM without Zapier | gravity forms crm integration | Next |
 | 6 | restrict-wordpress-content-crm-tags | How to restrict WordPress content using CRM tags | wordpress restrict content crm tags | Queue |
 | 7 | wordpress-abandoned-cart-crm | WordPress abandoned cart recovery with your CRM | wordpress abandoned cart crm | Queue |
 | 8 | email-opens-clicks-wordpress | See email opens and clicks inside WordPress | wordpress email tracking crm | Queue |
