@@ -89,14 +89,15 @@ See rotation table in `forum-log.md`. Advance to next platform after each succes
 
 ## Weekly metrics (required every run)
 
-Update the **Weekly metrics** table in [`marketing/forum-log.md`](forum-log.md):
+Update the **Weekly metrics** table in [`marketing/forum-log.md`](forum-log.md).
 
-- Week ending (Sunday date)
-- Guides live (count)
-- Guides published this week (0 or 1)
-- Forum replies this week (0 or 1)
-- Site URL
-- Notes (one line)
+Also update **Organic search** metrics when GSC/GA4 are connected (see [`docs/MEASUREMENT-SETUP.md`](../docs/MEASUREMENT-SETUP.md)):
+
+- Search Console: impressions, clicks, top query (last 7 days)
+- GA4: sessions, `affiliate_click` events (last 7 days)
+- WP Fusion affiliate portal: clicks if checked
+
+Report **commercial confidence** (High / Medium / Low) with evidence — see `.cursor/rules/commercial-growth.mdc`.
 
 ---
 

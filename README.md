@@ -15,6 +15,8 @@ Scheduled runs follow [`marketing/RUNBOOK.md`](marketing/RUNBOOK.md):
 - **Tuesday 10:30** — publish SEO guide
 - **Thursday 10:30** — one helpful forum reply (Browser Hub)
 
+**Measurement:** [`docs/MEASUREMENT-SETUP.md`](docs/MEASUREMENT-SETUP.md) (Search Console + GA4 — required for commercial reporting)
+
 ## Quick start (GitHub Pages)
 
 1. Repo: https://github.com/GemmaBailey03/wpfusion-guides

@@ -46,8 +46,10 @@ Update every run (Tuesday or Thursday). Gemma checks affiliate conversions month
 | --- | --- | --- | --- | --- |
 | — | — | — | — | — |
 
-### Organic search (optional — after GSC setup)
+### Organic search (Search Console + GA4)
 
-| Month | Impressions | Clicks | Top query |
-| --- | --- | --- | --- |
-| — | — | — | Add Search Console when site is live |
+Setup: [`docs/MEASUREMENT-SETUP.md`](../docs/MEASUREMENT-SETUP.md). Report weekly after GSC/GA4 are connected.
+
+| Week ending | Impressions (7d) | Clicks (7d) | Top query | GA sessions (7d) | Affiliate clicks (7d) |
+| --- | --- | --- | --- | --- | --- |
+| — | — | — | Pending GSC setup | — | Pending GA4 setup |
