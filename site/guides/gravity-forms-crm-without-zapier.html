@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- wpf-measurement -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9MG9GLR8RF"></script>
+  <script src="../js/analytics-config.js"></script>
+  <script src="../js/analytics.js"></script>
+<!-- / wpf-measurement -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gravity Forms → CRM without Zapier — WP Fusion Guides</title>
+  <meta name="description" content="Send Gravity Forms submissions to ActiveCampaign, Keap, HubSpot, and 60+ CRMs with tags and field mapping — no Zapier required. Step-by-step setup with WP Fusion.">
+  <link rel="canonical" href="https://gemmabailey03.github.io/wpfusion-guides/guides/gravity-forms-crm-without-zapier.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container inner">
+      <a class="logo" href="../index.html"><span class="logo-mark">WP</span> Fusion Guides</a>
+      <nav class="nav">
+        <a class="btn btn-primary" href="https://wpfusion.com/ref/599/" rel="noopener sponsored">Try WP Fusion</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal-page">
+    <div class="container" style="max-width: 720px;">
+      <p class="eyebrow">Guide · Gravity Forms · CRM</p>
+      <h1>Gravity Forms → CRM without Zapier</h1>
+      <p class="updated">Updated: 7 July 2026</p>
+
+      <p>Gravity Forms is one of the most popular lead capture tools on WordPress. Your CRM (ActiveCampaign, Keap, HubSpot, Mailchimp, and others) is where follow-up automations, sales pipelines, and segmentation live. Without a direct connection, every form submission becomes a manual export, a brittle Zapier recipe, or a lead that never enters your email sequences.</p>
+
+      <p><strong>WP Fusion</strong> integrates natively with Gravity Forms: each submission creates or updates a CRM contact, maps form fields to custom fields, applies tags, and can trigger automations — all from inside WordPress, with no per-submission Zapier costs.</p>
+
+      <h2>The problem with Zapier-only Gravity Forms workflows</h2>
+      <ul>
+        <li><strong>Per-task pricing</strong> — high-volume lead forms get expensive quickly on Zapier or Make</li>
+        <li><strong>One-way sync</strong> — CRM tags rarely flow back to WordPress to personalize forms or unlock content</li>
+        <li><strong>Fragmented logic</strong> — different tags for different form answers often mean separate Zaps and maintenance</li>
+        <li><strong>No unified contact</strong> — the same person who submits a form, buys in WooCommerce, and joins MemberPress may exist as duplicate CRM records</li>
+        <li><strong>Limited payment handling</strong> — syncing only successful Stripe or PayPal payments requires extra Zap steps</li>
+      </ul>
+
+      <h2>What WP Fusion does with Gravity Forms</h2>
+      <p>See the <a href="https://wpfusion.com/documentation/lead-generation/gravity-forms/" rel="noopener">official Gravity Forms documentation</a> for full settings. Core capabilities include:</p>
+      <ul>
+        <li><strong>CRM feeds</strong> — add one or more WP Fusion feeds per form with field mapping and tags</li>
+        <li><strong>Tagging leads</strong> — apply CRM tags (and lists, where supported) on every submission</li>
+        <li><strong>Conditional logic</strong> — different feeds for different answers (e.g. “Enterprise” vs “Small business”)</li>
+        <li><strong>Payment forms</strong> — process feeds only on successful payment, failed payment, or regardless of status</li>
+        <li><strong>Quiz addon</strong> — sync quiz score, grade, pass/fail, and tag based on results</li>
+        <li><strong>User Registration addon</strong> — sync new WordPress users created via Gravity Forms to your CRM</li>
+        <li><strong>CRM-driven form fields</strong> — show or hide fields based on tags already on the contact</li>
+        <li><strong>Auto-login &amp; return after login</strong> — gate content behind a form opt-in, then redirect back to protected pages</li>
+      </ul>
+
+      <h2>How setup works (high level)</h2>
+      <ol>
+        <li>Install WP Fusion on WordPress and connect your CRM (see the <a href="https://wpfusion.com/documentation/getting-started/" rel="noopener">getting started guide</a>).</li>
+        <li>Create or edit a form in Gravity Forms and save it.</li>
+        <li>Open <strong>Form Settings → WP Fusion</strong> and click <strong>Add New</strong> to create a feed.</li>
+        <li>Map form fields to CRM custom fields using the + icon in the feed settings panel.</li>
+        <li>Configure tags (and lists, if your CRM supports them) to apply when the form is submitted.</li>
+        <li>Optionally enable <strong>Opt-in Condition</strong> for conditional logic — e.g. apply <code>Enterprise Lead</code> only when “Company size” is 50+.</li>
+        <li>For payment forms, choose whether to process the feed on successful payment, failed payment, or always.</li>
+        <li>Submit a test entry → confirm the contact, tags, and fields in your CRM. WP Fusion adds a note and metabox on each Gravity Forms entry with the CRM contact ID.</li>
+      </ol>
+
+      <h2>Example tag strategy for lead forms</h2>
+      <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+        <thead>
+          <tr style="border-bottom: 2px solid var(--border); text-align: left;">
+            <th style="padding: 0.5rem 0;">Form / trigger</th>
+            <th style="padding: 0.5rem 0;">CRM tag</th>
+            <th style="padding: 0.5rem 0;">Automation idea</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">Newsletter signup</td><td><code>Newsletter Subscriber</code></td><td>Welcome sequence + weekly digest</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">Demo request</td><td><code>Demo Requested</code></td><td>Sales task + nurture before call</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">Pricing inquiry (enterprise)</td><td><code>Enterprise Lead</code></td><td>High-touch follow-up sequence</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">Quiz passed</td><td><code>Certified</code></td><td>Certificate email + upsell to course</td></tr>
+          <tr><td style="padding: 0.5rem 0;">Paid consultation booking</td><td><code>Consultation Purchased</code></td><td>Calendar link + prep questionnaire</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Multiple feeds and conditional logic</h2>
+      <p>One Gravity Form can have several WP Fusion feeds. Use conditional logic so each feed runs only when specific fields match — for example, route “Support” inquiries to one tag set and “Sales” inquiries to another without building separate forms or Zaps.</p>
+      <p>If a submission did not sync correctly, open the entry in Gravity Forms and click <strong>Process WP Fusion actions again</strong> to re-send it to your CRM.</p>
+
+      <h2>Gate content with a Gravity Forms opt-in</h2>
+      <p>WP Fusion supports a common funnel: visitor tries to access protected content → redirect to a page with a Gravity Forms opt-in → submission creates a CRM contact and applies tags → auto-login unlocks the content → visitor returns to the page they wanted.</p>
+      <p>Enable <strong>Form Auto Login</strong> and <strong>Return After Login</strong> in WP Fusion settings, then protect the target page with required tags in the WP Fusion meta box. Full walkthrough: <a href="https://wpfusion.com/documentation/lead-generation/gravity-forms/" rel="noopener">Gravity Forms integration docs</a> (Return after login section).</p>
+
+      <h2>Enhanced Ecommerce for paid Gravity Forms</h2>
+      <p>With WP Fusion’s Enhanced Ecommerce addon, payment form submissions can sync to deal pipelines (HubSpot, HighLevel, Brevo) or ecommerce components (ActiveCampaign, Keap, Drip, Ontraport). Configure deal title, stage, and value on each feed — useful for consultation bookings, deposits, and productized services collected through Gravity Forms.</p>
+
+      <h2>Gravity Forms + CRM vs Zapier</h2>
+      <p>Zapier works for simple one-way triggers (new entry → add to list). WP Fusion is stronger when you need:</p>
+      <ul>
+        <li>Multiple feeds with conditional logic on a single form</li>
+        <li>Payment-status-aware processing without extra Zaps</li>
+        <li>CRM tags controlling which form fields visitors see</li>
+        <li>Auto-login and content gating tied to form submissions</li>
+        <li>One contact record when the same person submits forms, buys in WooCommerce, and holds a membership</li>
+        <li>Batch export of historical Gravity Forms entries to your CRM</li>
+      </ul>
+      <p>For a broader WordPress ↔ CRM overview, see our <a href="wordpress-activecampaign-integration.html">ActiveCampaign integration guide</a>. Membership sites often combine lead forms with MemberPress — our <a href="memberpress-crm-tags.html">MemberPress + CRM guide</a> covers tag-based access. Store owners may also use <a href="woocommerce-keap-integration.html">WooCommerce + Keap sync</a> for purchase tagging alongside form leads.</p>
+
+      <h2>Setup checklist</h2>
+      <ol>
+        <li>Connect your CRM in WP Fusion.</li>
+        <li>Create a WP Fusion feed on each Gravity Form with field mapping and tags.</li>
+        <li>Enable conditional logic if different answers need different tags or fields.</li>
+        <li>For payment forms, set the correct payment-status processing rule.</li>
+        <li>Submit a test entry → verify contact, tags, and entry notes in Gravity Forms.</li>
+        <li>Optionally batch-export historical entries under WP Fusion → Advanced → Batch Operations.</li>
+      </ol>
+
+      <div class="cta-block">
+        <h2 style="margin-top: 0;">Ready to connect Gravity Forms and your CRM?</h2>
+        <p>WP Fusion supports Gravity Forms with 60+ CRMs including ActiveCampaign, Keap, HubSpot, and Mailchimp. Plans start at $297/year with a 30-day money-back guarantee.</p>
+        <a class="btn btn-primary btn-lg" href="https://wpfusion.com/ref/599/" rel="noopener sponsored">Get WP Fusion →</a>
+        <p style="font-size: 0.9rem; color: var(--muted); margin-top: 1rem;">Official docs: <a href="https://wpfusion.com/documentation/lead-generation/gravity-forms/" rel="noopener">Gravity Forms integration</a> · <a href="https://wpfusion.com/documentation/#integrations" rel="noopener">All integrations</a> · <a href="https://wpfusion.com/demo-signup/" rel="noopener">Try the demo</a></p>
+      </div>
+
+      <div class="disclosure-box">
+        <strong>Affiliate disclosure:</strong> I may earn a commission if you purchase through
+        <a href="https://wpfusion.com/ref/599/" rel="noopener sponsored">wpfusion.com/ref/599/</a> — at no extra cost to you.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>WP Fusion Guides</strong></div>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="wordpress-activecampaign-integration.html">ActiveCampaign guide</a>
+        <a href="https://wpfusion.com/documentation/lead-generation/gravity-forms/" rel="noopener">Official docs</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
