@@ -39,6 +39,7 @@ Update every run (Tuesday or Thursday). Gemma checks affiliate conversions month
 
 | Week ending | Guides live | Guides published this week | Forum replies this week | Site URL | Notes |
 | --- | --- | --- | --- | --- | --- |
+| 14 Jul 2026 | 6 | 1 | 0 | https://gemmabailey03.github.io/wpfusion-guides/ | Tue 14 Jul — Restrict WordPress content CRM tags guide live. Commercial confidence: Low — GSC/GA4 pending; no affiliate click data; forum distribution still blocked on Reddit. |
 | 9 Jul 2026 | 5 | 1 | 0 | https://gemmabailey03.github.io/wpfusion-guides/ | Thu 9 Jul — Reddit blocked (network policy); NEED YOU login at Browser Hub. Commercial confidence: Low — GSC/GA4 pending; 0 forum replies; distribution blocked on Reddit. |
 | 7 Jul 2026 | 5 | 1 | 0 | https://gemmabailey03.github.io/wpfusion-guides/ | Tue 7 Jul — Gravity Forms guide live. Commercial confidence: Low — GSC/GA4 still pending setup; no affiliate click data yet. |
 | 5 Jul 2026 | 4 | 1 | 0 | https://gemmabailey03.github.io/wpfusion-guides/ | Thu 2 Jul — Reddit blocked (network policy); NEED YOU login at Browser Hub. WhatsApp bridge failed (500) — message: ⚠️ WP Fusion marketing — NEED YOU Thu 2 Jul 2026 · Blocked at: Reddit login required · Action: Open http://127.0.0.1:3847 — log into Reddit, reply done. Tue 30 Jun — MemberPress guide live |

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- wpf-measurement -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9MG9GLR8RF"></script>
+  <script src="../js/analytics-config.js"></script>
+  <script src="../js/analytics.js"></script>
+<!-- / wpf-measurement -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to restrict WordPress content using CRM tags — WP Fusion Guides</title>
+  <meta name="description" content="Gate WordPress pages, posts, courses, and downloads based on CRM tags in ActiveCampaign, Keap, HubSpot, and 60+ platforms. Step-by-step access control with WP Fusion.">
+  <link rel="canonical" href="https://gemmabailey03.github.io/wpfusion-guides/guides/restrict-wordpress-content-crm-tags.html">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container inner">
+      <a class="logo" href="../index.html"><span class="logo-mark">WP</span> Fusion Guides</a>
+      <nav class="nav">
+        <a class="btn btn-primary" href="https://wpfusion.com/ref/599/" rel="noopener sponsored">Try WP Fusion</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal-page">
+    <div class="container" style="max-width: 720px;">
+      <p class="eyebrow">Guide · Access control · CRM tags</p>
+      <h1>How to restrict WordPress content using CRM tags</h1>
+      <p class="updated">Updated: 14 July 2026</p>
+
+      <p>Most WordPress membership and LMS plugins gate content by role or product purchase. Your CRM (ActiveCampaign, Keap, HubSpot, Mailchimp, and others) holds the real picture of who is engaged, who bought, and who belongs in which segment. Without a bridge, you cannot unlock a bonus module because someone clicked a link in an email, or hide a sales page from existing customers who already have a tag in your CRM.</p>
+
+      <p><strong>WP Fusion</strong> lets you restrict pages, posts, courses, lessons, downloads, and menu items based on tags stored in your connected CRM. When a user logs in, WP Fusion checks their CRM contact record and shows or hides content accordingly — no custom code, no duplicate access rules in two systems.</p>
+
+      <h2>The problem with WordPress-only access rules</h2>
+      <ul>
+        <li><strong>CRM and site out of sync</strong> — a contact earns a tag in an email automation but still sees “members only” content on WordPress</li>
+        <li><strong>No tag-driven unlocks</strong> — you cannot grant access when a sales rep applies a tag in the CRM</li>
+        <li><strong>Fragmented stacks</strong> — MemberPress, LearnDash, and WooCommerce each have their own rules; CRM segments sit elsewhere</li>
+        <li><strong>Manual workarounds</strong> — exporting CSVs or building Zapier chains to copy tags back into WordPress user meta</li>
+        <li><strong>Stale access</strong> — someone cancels in the CRM but still reads protected content until you manually remove their WordPress role</li>
+      </ul>
+
+      <h2>How WP Fusion access control works</h2>
+      <p>WP Fusion reads tags from the logged-in user’s CRM contact record and compares them to tags you set on each piece of content. See the <a href="https://wpfusion.com/documentation/getting-started/access-control/" rel="noopener">official access control documentation</a> for full settings. Core concepts:</p>
+      <ul>
+        <li><strong>Required tags (any)</strong> — user needs at least one of the listed tags to view the content</li>
+        <li><strong>Required tags (all)</strong> — user must have every listed tag</li>
+        <li><strong>Restricted behavior</strong> — show a message, redirect to a URL (e.g. sales or login page), or hide the content entirely</li>
+        <li><strong>Bi-directional sync</strong> — when site activity applies tags in the CRM, access updates on the next page load (or via webhook, depending on CRM)</li>
+        <li><strong>Works beyond posts</strong> — menus, widgets, blocks, LearnDash lessons, MemberPress rules, and downloadable files can all respect CRM tags</li>
+      </ul>
+
+      <h2>How setup works (high level)</h2>
+      <ol>
+        <li>Install WP Fusion on WordPress and connect your CRM (see the <a href="https://wpfusion.com/documentation/getting-started/" rel="noopener">getting started guide</a>).</li>
+        <li>Ensure users are linked to CRM contacts — WP Fusion creates contacts on registration and syncs tags on login.</li>
+        <li>Edit a page, post, or course → open the <strong>WP Fusion</strong> meta box in the sidebar.</li>
+        <li>Enter tags under <strong>Required Tags (Any)</strong> or <strong>Required Tags (All)</strong>.</li>
+        <li>Choose what happens when access is denied: custom message, redirect URL, or hide from archives and menus.</li>
+        <li>Save and test with a user who has (and lacks) the required tags in your CRM.</li>
+        <li>Optionally set global defaults under WP Fusion → Settings → Access Control for site-wide behavior.</li>
+      </ol>
+
+      <h2>Example tag strategies for content gating</h2>
+      <table style="width:100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem;">
+        <thead>
+          <tr style="border-bottom: 2px solid var(--border); text-align: left;">
+            <th style="padding: 0.5rem 0;">Content</th>
+            <th style="padding: 0.5rem 0;">Required CRM tag(s)</th>
+            <th style="padding: 0.5rem 0;">Use case</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">Bonus training module</td><td><code>Premium Member</code></td><td>Unlock after purchase tag syncs from WooCommerce or MemberPress</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">Alumni resource library</td><td><code>Course Graduate</code></td><td>Apply tag when LearnDash course completes; gate download page</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">VIP coaching portal</td><td><code>VIP</code> + <code>Active Client</code></td><td>Require all tags — sales applies both in CRM after onboarding call</td></tr>
+          <tr style="border-bottom: 1px solid var(--border);"><td style="padding: 0.5rem 0;">Upsell landing page</td><td>Hide if <code>Pro Plan</code></td><td>Redirect existing Pro customers to account dashboard instead of sales page</td></tr>
+          <tr><td style="padding: 0.5rem 0;">Lead magnet download</td><td><code>Lead Magnet Downloaded</code></td><td>Apply tag via Gravity Forms feed; show follow-up content only to tagged users</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Restricting content by plugin type</h2>
+
+      <h3>Pages, posts, and custom post types</h3>
+      <p>On any post or page, use the WP Fusion meta box to set required tags and redirect behavior. Restricted content can be excluded from search results and RSS feeds. You can also use the WP Fusion block or shortcode to show different content blocks to tagged vs non-tagged visitors on the same page.</p>
+
+      <h3>LearnDash and other LMS plugins</h3>
+      <p>WP Fusion integrates with LearnDash, LifterLMS, Tutor LMS, and LearnPress. Tag students when they enroll or complete lessons, then set required tags on individual lessons or courses. A student who completes Module 1 and receives <code>Module 1 Complete</code> in ActiveCampaign can automatically see Module 2 on the next visit. See our <a href="learndash-activecampaign-tags.html">LearnDash + ActiveCampaign tagging guide</a> for enrollment workflows.</p>
+
+      <h3>MemberPress and membership plugins</h3>
+      <p>MemberPress handles subscription access; WP Fusion adds CRM tag rules on top. Gate bonus content by CRM tag even when multiple membership levels overlap, or unlock content when a win-back automation applies a tag. Our <a href="memberpress-crm-tags.html">MemberPress + CRM guide</a> covers membership tagging and access together.</p>
+
+      <h3>WooCommerce and digital downloads</h3>
+      <p>Purchase tags from WooCommerce sync to the CRM; WP Fusion can require those same tags on download pages or member areas. Combine with order and LTV field sync for segmented post-purchase content. See the <a href="woocommerce-keap-integration.html">WooCommerce + Keap guide</a> for purchase tagging patterns.</p>
+
+      <h3>Navigation menus and widgets</h3>
+      <p>Under Appearance → Menus, each menu item can have WP Fusion tag requirements — hide “Upgrade” links from users who already have <code>Pro Plan</code>, or show “Student Portal” only to tagged learners. Widgets and sidebar blocks support the same rules.</p>
+
+      <h2>Redirect and messaging options</h2>
+      <p>When a logged-in user lacks required tags, you can:</p>
+      <ul>
+        <li>Display a custom restricted message with a call-to-action button</li>
+        <li>Redirect to a sales page, login page, or external URL</li>
+        <li>Redirect logged-out visitors to login, then return them to the original page after authentication</li>
+        <li>Hide the content completely from archives, menus, and site search</li>
+      </ul>
+      <p>Global defaults under WP Fusion → Settings → Access Control apply when individual posts do not override them. Per-post settings always win when set.</p>
+
+      <h2>CRM tag → access without a WordPress purchase</h2>
+      <p>One of the most powerful patterns: apply a tag in your CRM (via automation, manual sales action, or webhook) and grant WordPress access without the user buying through WooCommerce or MemberPress on that visit. WP Fusion’s linked tags feature can auto-enroll users in membership levels or apply WordPress capabilities when a CRM tag appears — useful for comp access, beta testers, or migrated customers.</p>
+      <p>When the tag is removed in the CRM, access revokes on the next sync. Configure tag removal behavior under WP Fusion → Integrations for your CRM.</p>
+
+      <h2>Access control vs membership plugins alone</h2>
+      <p>Native membership plugins excel at billing and subscription logic. WP Fusion adds CRM-native access rules:</p>
+      <ul>
+        <li>Gate content by <strong>any</strong> tag in your CRM, not just plugin-specific roles</li>
+        <li>Unlock content from email automation, sales workflows, or support actions in the CRM</li>
+        <li>One contact record drives access across LearnDash, WooCommerce, MemberPress, and custom pages</li>
+        <li>Bi-directional field sync shows CRM data inside WordPress while tags control what users see</li>
+      </ul>
+      <p>For a full WordPress ↔ CRM overview, see our <a href="wordpress-activecampaign-integration.html">ActiveCampaign integration guide</a>. Lead capture that feeds tags into access rules is covered in our <a href="gravity-forms-crm-without-zapier.html">Gravity Forms → CRM guide</a>.</p>
+
+      <h2>Setup checklist</h2>
+      <ol>
+        <li>Connect your CRM in WP Fusion and confirm test contacts sync tags correctly.</li>
+        <li>Define tag names in your CRM that map to each protected content tier.</li>
+        <li>Set required tags on pages, courses, or downloads using the WP Fusion meta box.</li>
+        <li>Configure redirect URLs and restricted messages for each content type.</li>
+        <li>Test with a user account that has the tag, and one that does not.</li>
+        <li>Verify menu items and widgets hide correctly for untagged users.</li>
+        <li>Build CRM automations that apply tags on purchase, completion, or engagement — access updates automatically.</li>
+      </ol>
+
+      <div class="cta-block">
+        <h2 style="margin-top: 0;">Ready to gate WordPress content with CRM tags?</h2>
+        <p>WP Fusion supports tag-based access control with 60+ CRMs including ActiveCampaign, Keap, HubSpot, and Mailchimp. Plans start at $297/year with a 30-day money-back guarantee.</p>
+        <a class="btn btn-primary btn-lg" href="https://wpfusion.com/ref/599/" rel="noopener sponsored">Get WP Fusion →</a>
+        <p style="font-size: 0.9rem; color: var(--muted); margin-top: 1rem;">Official docs: <a href="https://wpfusion.com/documentation/getting-started/access-control/" rel="noopener">Access control</a> · <a href="https://wpfusion.com/documentation/#integrations" rel="noopener">All integrations</a> · <a href="https://wpfusion.com/demo-signup/" rel="noopener">Try the demo</a></p>
+      </div>
+
+      <div class="disclosure-box">
+        <strong>Affiliate disclosure:</strong> I may earn a commission if you purchase through
+        <a href="https://wpfusion.com/ref/599/" rel="noopener sponsored">wpfusion.com/ref/599/</a> — at no extra cost to you.
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div><strong>WP Fusion Guides</strong></div>
+      <div class="footer-links">
+        <a href="../index.html">Home</a>
+        <a href="memberpress-crm-tags.html">MemberPress guide</a>
+        <a href="https://wpfusion.com/documentation/getting-started/access-control/" rel="noopener">Official docs</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
