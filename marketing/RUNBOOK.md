@@ -75,9 +75,9 @@
 
 1. Check Browser Hub health: `GET http://127.0.0.1:3847/health`
 2. If down: skip forum step, log in `forum-log.md`, WhatsApp Gemma with NEED YOU note (Browser Hub on EC2 must be running — `browser-hub.service`)
-3. If up: submit task from [`scripts/browser-hub-forum-reddit.json`](../scripts/browser-hub-forum-reddit.json) OR [`scripts/browser-hub-forum-wordpress-org.json`](../scripts/browser-hub-forum-wordpress-org.json) based on platform rotation in `forum-log.md`
+3. If up: submit task from [`scripts/browser-hub-forum-wordpress-org.json`](../scripts/browser-hub-forum-wordpress-org.json) only. Rotate search query per `forum-log.md`. **Never use Reddit** — account permanently blocked.
 4. Poll `GET http://127.0.0.1:3847/tasks/<id>` until complete or failed
-5. If login required: WhatsApp Gemma — *“Open http://127.0.0.1:3847 — log into [platform] in the open browser, reply done when finished.”* Do not post until login works.
+5. If WordPress.org login required: WhatsApp Gemma once for one-time login at https://login.wordpress.org/ — do not ask for Reddit login.
 6. Log thread URL + date in `forum-log.md`
 7. Commit log update + push
 
@@ -156,7 +156,7 @@ Do **not** tell Gemma to SSH or use Terminal for routine fixes — point her to 
 ```text
 ⚠️ WP Fusion marketing — NEED YOU Thu [date]
 
-• Blocked at: [Reddit / WordPress.org] login required
+• Blocked at: WordPress.org login required
 • Action: Open http://127.0.0.1:3847 — log in, then reply "done"
 ```
 

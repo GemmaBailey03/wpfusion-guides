@@ -6,20 +6,26 @@ Max **1 comment per Thursday run**. Value-first answers only.
 
 | Date | Platform | Thread URL | Topic summary | Status |
 | --- | --- | --- | --- | --- |
-| 16 Jul 2026 | r/Wordpress | — | ActiveCampaign + WordPress search — skipped | Blocked — Reddit network policy block; login required in Browser Hub |
-| 9 Jul 2026 | r/Wordpress | — | ActiveCampaign + WordPress search — skipped | Blocked — Reddit network policy block; login required in Browser Hub |
-| 2 Jul 2026 | r/Wordpress | — | ActiveCampaign + WordPress search — skipped | Blocked — Reddit network policy block; login required in Browser Hub |
-| 25 Jun 2026 | r/Wordpress | — | CRM/ActiveCampaign search — skipped | Blocked — Reddit network security block; login required in Browser Hub |
+| 16 Jul 2026 | Reddit | — | ActiveCampaign + WordPress search — skipped | **Permanent — account blocked. Reddit removed from rotation (Jul 2026).** |
+| 9 Jul 2026 | r/Wordpress | — | ActiveCampaign + WordPress search — skipped | Blocked — Reddit network policy block |
+| 2 Jul 2026 | r/Wordpress | — | ActiveCampaign + WordPress search — skipped | Blocked — Reddit network policy block |
+| 25 Jun 2026 | r/Wordpress | — | CRM/ActiveCampaign search — skipped | Blocked — Reddit network security block |
 
 ## Platform rotation (Thursday)
 
-Use the next platform in order; skip if login fails or rules prohibit links.
+**Reddit is off limits permanently** (Gemma's account blocked). Do not retry.
 
-1. r/Wordpress — CRM sync / integration questions
-2. r/learndash — course + email automation
-3. r/woocommerce — customer sync / abandoned cart
-4. r/marketingautomation — WordPress + CRM (only when genuinely on-topic)
-5. WordPress.org support forums — CRM/integration tags
+Use **WordPress.org support forums only**. Rotate search topic each week:
+
+1. `activecampaign integration` — general CRM sync
+2. `learndash email` — course + automation
+3. `woocommerce crm` — customer sync / cart
+4. `memberpress` — membership + CRM
+5. `gravity forms crm` — form → CRM without Zapier
+
+Use [`scripts/browser-hub-forum-wordpress-org.json`](../scripts/browser-hub-forum-wordpress-org.json) — update `startUrl` search query per rotation above.
+
+Skip if WordPress.org login required (WhatsApp Gemma once for one-time login). Skip if no suitable thread.
 
 ## Search keywords (Browser Hub)
 
@@ -40,7 +46,7 @@ Update every run (Tuesday or Thursday). Gemma checks affiliate conversions month
 
 | Week ending | Guides live | Guides published this week | Forum replies this week | Site URL | Notes |
 | --- | --- | --- | --- | --- | --- |
-| 20 Jul 2026 | 6 | 0 | 0 | https://gemmabailey03.github.io/wpfusion-guides/ | Thu 16 Jul — Reddit blocked (network policy); NEED YOU login at Browser Hub. Commercial confidence: Low — GSC/GA4 pending; 0 forum replies; distribution blocked on Reddit. |
+| 20 Jul 2026 | 6 | 0 | 0 | https://gemmabailey03.github.io/wpfusion-guides/ | Thu 16 Jul — Reddit permanently blocked; switched rotation to WordPress.org only. Commercial confidence: Low — forum distribution pivoting to WordPress.org. |
 | 14 Jul 2026 | 6 | 1 | 0 | https://gemmabailey03.github.io/wpfusion-guides/ | Tue 14 Jul — Restrict WordPress content CRM tags guide live. Commercial confidence: Low — GSC/GA4 pending; no affiliate click data; forum distribution still blocked on Reddit. |
 | 9 Jul 2026 | 5 | 1 | 0 | https://gemmabailey03.github.io/wpfusion-guides/ | Thu 9 Jul — Reddit blocked (network policy); NEED YOU login at Browser Hub. Commercial confidence: Low — GSC/GA4 pending; 0 forum replies; distribution blocked on Reddit. |
 | 7 Jul 2026 | 5 | 1 | 0 | https://gemmabailey03.github.io/wpfusion-guides/ | Tue 7 Jul — Gravity Forms guide live. Commercial confidence: Low — GSC/GA4 still pending setup; no affiliate click data yet. |

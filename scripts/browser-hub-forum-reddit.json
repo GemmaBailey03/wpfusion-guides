@@ -1,7 +1,8 @@
 {
-  "taskName": "wpfusion-reddit-forum-search-reply",
-  "description": "Search Reddit for WordPress CRM integration threads and post one helpful reply. Requires one-time Reddit login in Browser Hub profile.",
-  "startUrl": "https://old.reddit.com/r/Wordpress/search?q=activecampaign+wordpress&restrict_sr=1&sort=new&t=month",
-  "maxRuntimeSeconds": 180,
-  "instructions": "# WP Fusion Reddit forum task — max 1 reply per run\n# Read marketing/RUNBOOK.md and marketing/affiliate-rules.md before customizing the reply text.\n\nwait 2000\nscreenshot search-results\nextract\n# Agent: review extracted threads, pick ONE where WP Fusion genuinely helps.\n# If not logged in, screenshot will show login — stop and WhatsApp Gemma.\n\n# Manual agent step after extract:\n# 1. Draft helpful answer (question first, tool second)\n# 2. Include short affiliate disclosure + https://wpfusion.com/ref/599/\n# 3. Navigate to thread and post (customize instructions below per run)\n\n# Example follow-up steps (agent replaces URL and comment text each run):\n# goto https://old.reddit.com/r/Wordpress/comments/EXAMPLE/\n# wait 1500\n# screenshot thread\n# click textarea[placeholder*='comment']\n# fill textarea[placeholder*='comment'] | Your helpful answer here. Disclosure: affiliate link — I may earn a commission at no extra cost to you. https://wpfusion.com/ref/599/\n# screenshot draft\n# Agent must verify comment before submit — uncomment next line only when ready:\n# click button:has-text('Comment')"
+  "_deprecated": "DO NOT USE — Gemma's Reddit account is permanently blocked (Jul 2026). Use browser-hub-forum-wordpress-org.json only.",
+  "taskName": "wpfusion-reddit-forum-search-reply-DEPRECATED",
+  "description": "DEPRECATED — Reddit permanently unavailable. Do not submit this task.",
+  "startUrl": "https://old.reddit.com/r/Wordpress/",
+  "maxRuntimeSeconds": 60,
+  "instructions": "STOP. Do not run. Reddit is permanently blocked. Use browser-hub-forum-wordpress-org.json instead."
 }

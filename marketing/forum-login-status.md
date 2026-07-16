@@ -1,26 +1,28 @@
 # Forum login — one-time setup
 
-The agent will WhatsApp you when Reddit or WordPress.org login is required for Thursday forum runs.
+The agent will WhatsApp you when **WordPress.org** login is required for Thursday forum runs.
 
-## When you see NEED YOU
+## Reddit — permanently unavailable
 
-1. Start Browser Hub (if not running):
-   ```bash
-   cd "/Users/gemmabailey/AiStuff/Playwrite Browser " && npm run dev
-   ```
-2. Open http://127.0.0.1:3847/
-3. Log in on the platform requested:
-   - **Reddit:** https://www.reddit.com/login/
-   - **WordPress.org:** https://login.wordpress.org/
-4. Reply **done** in chat
+**Do not attempt Reddit.** Gemma's Reddit account is permanently blocked (prior agent activity). Never use `browser-hub-forum-reddit.json`, never WhatsApp asking for Reddit login, never add Reddit back to rotation without explicit new instructions.
 
-The session persists in Browser Hub’s default profile for future Thursday runs.
+Thursday forum outreach uses **WordPress.org support forums only**.
+
+---
+
+## When you see NEED YOU (WordPress.org only)
+
+1. Browser Hub runs on **EC2** (port 3847) — ask Cursor to open it, or SSH is not required if Cursor handles login.
+2. Log in at: https://login.wordpress.org/
+3. Reply **done** in chat
+
+The session persists in Browser Hub’s profile for future Thursday runs.
 
 ## Status
 
-| Platform | Logged in | Date |
+| Platform | Status | Notes |
 | --- | --- | --- |
-| Reddit | Pending first Thursday run | — |
-| WordPress.org | Pending first Thursday run | — |
+| Reddit | **Permanently blocked** | Do not use — account unusable since Jul 2026 |
+| WordPress.org | Pending first successful reply | One-time login may still be needed |
 
 Agent updates this table after successful login.

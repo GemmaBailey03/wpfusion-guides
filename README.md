@@ -45,4 +45,4 @@ Dashboard: http://127.0.0.1:3847/
 1. Confirm WP Fusion affiliate area is active (ref `/599/`)
 2. Create GitHub repo + enable Pages
 3. Approve Cursor Automation in Agents Window
-4. Log into Reddit / WordPress.org via Browser Hub when agent requests it
+4. Log into **WordPress.org** via Browser Hub on EC2 when agent requests it (Reddit is permanently unavailable)

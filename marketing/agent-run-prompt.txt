@@ -4,7 +4,7 @@ Affiliate link: https://wpfusion.com/ref/599/
 
 If today is Tuesday: publish the next SEO guide from marketing/content-queue.md. Update site/index.html, site/sitemap.xml, marketing/content-queue.md, and marketing/forum-log.md. Commit and push to main.
 
-If today is Thursday: run one helpful forum reply via Browser Hub (scripts/browser-hub-forum-reddit.json or browser-hub-forum-wordpress-org.json per forum-log.md rotation). Max 1 comment. Skip if Browser Hub is down or login required — note NEED YOU in WhatsApp.
+If today is Thursday: run one helpful forum reply via Browser Hub using **WordPress.org only** (`scripts/browser-hub-forum-wordpress-org.json` — rotate search per forum-log.md). **Never use Reddit** (account permanently blocked). Max 1 comment. Skip if Browser Hub is down or WordPress.org login required — note NEED YOU in WhatsApp.
 
 Always read marketing/affiliate-rules.md and marketing/product-knowledge.md. Never skip affiliate disclosure.
 
