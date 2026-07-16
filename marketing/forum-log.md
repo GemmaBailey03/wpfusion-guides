@@ -6,6 +6,7 @@ Max **1 comment per Thursday run**. Value-first answers only.
 
 | Date | Platform | Thread URL | Topic summary | Status |
 | --- | --- | --- | --- | --- |
+| 16 Jul 2026 | WordPress.org | — | Login attempt for forum setup | **Account disabled** — same pattern as Reddit; forum outreach stopped |
 | 16 Jul 2026 | Reddit | — | ActiveCampaign + WordPress search — skipped | **Permanent — account blocked. Reddit removed from rotation (Jul 2026).** |
 | 9 Jul 2026 | r/Wordpress | — | ActiveCampaign + WordPress search — skipped | Blocked — Reddit network policy block |
 | 2 Jul 2026 | r/Wordpress | — | ActiveCampaign + WordPress search — skipped | Blocked — Reddit network policy block |
@@ -13,19 +14,9 @@ Max **1 comment per Thursday run**. Value-first answers only.
 
 ## Platform rotation (Thursday)
 
-**Reddit is off limits permanently** (Gemma's account blocked). Do not retry.
+**Forum outreach is disabled.** Reddit and WordPress.org accounts are blocked/disabled (Jul 2026). Do not use Browser Hub for forum posting.
 
-Use **WordPress.org support forums only**. Rotate search topic each week:
-
-1. `activecampaign integration` — general CRM sync
-2. `learndash email` — course + automation
-3. `woocommerce crm` — customer sync / cart
-4. `memberpress` — membership + CRM
-5. `gravity forms crm` — form → CRM without Zapier
-
-Use [`scripts/browser-hub-forum-wordpress-org.json`](../scripts/browser-hub-forum-wordpress-org.json) — update `startUrl` search query per rotation above.
-
-Skip if WordPress.org login required (WhatsApp Gemma once for one-time login). Skip if no suitable thread.
+Thursday runs follow **SEO & growth** tasks in [`marketing/RUNBOOK.md`](RUNBOOK.md) instead (guide refresh, extra content, metrics review).
 
 ## Search keywords (Browser Hub)
 

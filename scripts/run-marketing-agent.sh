@@ -71,9 +71,7 @@ check_unpushed_commits() {
   echo "=== WP Fusion marketing run $STAMP ($DAY_NAME) ==="
   cd "$ROOT"
 
-  if [ "$(date +%u)" = "4" ]; then
-    "${ROOT}/scripts/ensure-browser-hub.sh" || notify "⚠️ WP Fusion marketing — Browser Hub failed to start Thu $(date +%-d\ %b). Forum step may skip."
-  fi
+  # Browser Hub no longer used — forum outreach disabled Jul 2026
 
   if [ "$IS_EC2" -eq 1 ]; then
     if [ -z "${CURSOR_API_KEY:-}" ]; then

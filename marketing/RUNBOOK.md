@@ -27,7 +27,7 @@
 | Day | Activity |
 | --- | --- |
 | **Tuesday** | SEO: publish one new guide OR refresh an existing guide |
-| **Thursday** | Community: one helpful forum reply via Browser Hub |
+| **Thursday** | **SEO & growth** (forum outreach disabled — see below) |
 
 ---
 
@@ -61,29 +61,25 @@
 
 ---
 
-## Thursday — forum community help
+## Thursday — SEO & growth (forum outreach disabled)
 
-### Rules
+Reddit and WordPress.org accounts are **blocked/disabled** (Jul 2026). Do **not** use Browser Hub for forum posting. Do **not** WhatsApp Gemma for forum login.
 
-- **Max 1 comment** per run
-- Answer the question fully first; mention WP Fusion only if it genuinely fits
-- Include affiliate disclosure (short version from `affiliate-rules.md`)
-- **Do NOT** automate Facebook groups
-- **Do NOT** open Browser Hub more than once per run
+Pick **one** high-impact task per Thursday (prioritise commercial results):
 
-### Browser Hub procedure
+1. **Accelerate content** — if queue has a strong keyword (e.g. comparison guide), publish the next guide early
+2. **Refresh an existing guide** — update date, add 2–3 sentences, improve internal links and CTA placement
+3. **Homepage & sitemap** — ensure all guides linked; fix any missing cross-links
+4. **Metrics review** — pull GSC (impressions, clicks, top query) and GA4 (sessions, `affiliate_click` events); log in `forum-log.md` and report commercial confidence
+5. **Conversion improvements** — strengthen CTAs, add FAQ snippet, improve meta descriptions on lowest-performing pages (use GSC data if available)
 
-1. Check Browser Hub health: `GET http://127.0.0.1:3847/health`
-2. If down: skip forum step, log in `forum-log.md`, WhatsApp Gemma with NEED YOU note (Browser Hub on EC2 must be running — `browser-hub.service`)
-3. If up: submit task from [`scripts/browser-hub-forum-wordpress-org.json`](../scripts/browser-hub-forum-wordpress-org.json) only. Rotate search query per `forum-log.md`. **Never use Reddit** — account permanently blocked.
-4. Poll `GET http://127.0.0.1:3847/tasks/<id>` until complete or failed
-5. If WordPress.org login required: WhatsApp Gemma once for one-time login at https://login.wordpress.org/ — do not ask for Reddit login.
-6. Log thread URL + date in `forum-log.md`
-7. Commit log update + push
+Commit + push any site changes. Log activity in `forum-log.md` Notes.
 
-### Platform rotation
+### Do not
 
-See rotation table in `forum-log.md`. Advance to next platform after each successful reply.
+- Post on Reddit, WordPress.org forums, Facebook groups, or any community platform via automation
+- Open Browser Hub for forum tasks
+- WhatsApp asking Gemma to log into blocked platforms
 
 ---
 
@@ -121,8 +117,11 @@ Report **commercial confidence** (High / Medium / Low) with evidence — see `.c
 ```text
 ✅ WP Fusion marketing — COMPLETED Thu [date]
 
-• Forum: [platform + thread URL or "skipped — no login"]
-• Next Thu: [next platform in rotation]
+• Growth: [guide published/refreshed OR metrics review + findings]
+• GSC (7d): [impressions / clicks / top query]
+• GA4 (7d): [sessions / affiliate_click count]
+• Commercial confidence: [High/Medium/Low] — [one line why]
+• Next Thu: [planned focus]
 ```
 
 ### On failure

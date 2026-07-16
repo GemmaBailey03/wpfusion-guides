@@ -1,7 +1,8 @@
 {
-  "taskName": "wpfusion-wordpress-org-forum-search-reply",
-  "description": "Search WordPress.org support forums for CRM/integration questions. Requires one-time wordpress.org login in Browser Hub profile.",
-  "startUrl": "https://wordpress.org/support/search/activecampaign+integration/",
-  "maxRuntimeSeconds": 180,
-  "instructions": "# WP Fusion WordPress.org forum task — max 1 reply per run\n# Read marketing/RUNBOOK.md and marketing/affiliate-rules.md before posting.\n\nwait 2000\nscreenshot search-results\nextract\n# Agent: pick ONE recent thread about CRM/email integration where WP Fusion fits.\n# If login required to reply, screenshot will show it — WhatsApp Gemma for one-time login.\n\n# Example follow-up (agent customizes per run):\n# goto https://wordpress.org/support/topic/EXAMPLE/\n# wait 1500\n# screenshot thread\n# Agent drafts reply with full disclosure from affiliate-rules.md\n# Post via Browser Hub fill/click steps once logged in"
+  "_deprecated": "DO NOT USE — WordPress.org account disabled (Jul 2026). Thursday runs use SEO & growth tasks only.",
+  "taskName": "wpfusion-wordpress-org-DEPRECATED",
+  "description": "DEPRECATED — WordPress.org account disabled. Do not submit.",
+  "startUrl": "https://wordpress.org/support/",
+  "maxRuntimeSeconds": 60,
+  "instructions": "STOP. Do not run. Use Thursday SEO & growth tasks in marketing/RUNBOOK.md instead."
 }
