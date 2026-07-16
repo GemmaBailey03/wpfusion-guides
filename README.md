@@ -1,6 +1,8 @@
-# WP Fusion Guides — automated affiliate marketing
+# WP Fusion Guides — affiliate marketing
 
-Hands-off SEO guides + forum outreach promoting [WP Fusion](https://wpfusion.com) via affiliate link https://wpfusion.com/ref/599/.
+> **⛔ PROJECT STOPPED (16 Jul 2026)** — Automation disabled. See [`PROJECT-STOPPED.md`](PROJECT-STOPPED.md).
+
+Hands-off SEO guides promoting [WP Fusion](https://wpfusion.com) via affiliate link https://wpfusion.com/ref/599/ (historical — no longer maintained).
 
 ## Structure
 
