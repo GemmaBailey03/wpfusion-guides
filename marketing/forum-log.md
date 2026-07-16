@@ -6,6 +6,7 @@ Max **1 comment per Thursday run**. Value-first answers only.
 
 | Date | Platform | Thread URL | Topic summary | Status |
 | --- | --- | --- | --- | --- |
+| 16 Jul 2026 | r/Wordpress | — | ActiveCampaign + WordPress search — skipped | Blocked — Reddit network policy block; login required in Browser Hub |
 | 9 Jul 2026 | r/Wordpress | — | ActiveCampaign + WordPress search — skipped | Blocked — Reddit network policy block; login required in Browser Hub |
 | 2 Jul 2026 | r/Wordpress | — | ActiveCampaign + WordPress search — skipped | Blocked — Reddit network policy block; login required in Browser Hub |
 | 25 Jun 2026 | r/Wordpress | — | CRM/ActiveCampaign search — skipped | Blocked — Reddit network security block; login required in Browser Hub |
@@ -39,6 +40,7 @@ Update every run (Tuesday or Thursday). Gemma checks affiliate conversions month
 
 | Week ending | Guides live | Guides published this week | Forum replies this week | Site URL | Notes |
 | --- | --- | --- | --- | --- | --- |
+| 20 Jul 2026 | 6 | 0 | 0 | https://gemmabailey03.github.io/wpfusion-guides/ | Thu 16 Jul — Reddit blocked (network policy); NEED YOU login at Browser Hub. Commercial confidence: Low — GSC/GA4 pending; 0 forum replies; distribution blocked on Reddit. |
 | 14 Jul 2026 | 6 | 1 | 0 | https://gemmabailey03.github.io/wpfusion-guides/ | Tue 14 Jul — Restrict WordPress content CRM tags guide live. Commercial confidence: Low — GSC/GA4 pending; no affiliate click data; forum distribution still blocked on Reddit. |
 | 9 Jul 2026 | 5 | 1 | 0 | https://gemmabailey03.github.io/wpfusion-guides/ | Thu 9 Jul — Reddit blocked (network policy); NEED YOU login at Browser Hub. Commercial confidence: Low — GSC/GA4 pending; 0 forum replies; distribution blocked on Reddit. |
 | 7 Jul 2026 | 5 | 1 | 0 | https://gemmabailey03.github.io/wpfusion-guides/ | Tue 7 Jul — Gravity Forms guide live. Commercial confidence: Low — GSC/GA4 still pending setup; no affiliate click data yet. |
